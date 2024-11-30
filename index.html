@@ -2,59 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Static Interactive Resume</title>
     <link rel="stylesheet" href="style.css">
+    <title>Calculator</title>
 </head>
 <body>
-    <div class="resume-container">
-    <!--Left Section-->
-    <div class="left-section">
-    <img src="images (27).jpeg" alt="profile picture" class="profile-picture">
-    <section id="objective">
-        <h3 style="color:white">Career Objective</h3>
-        <p style="text-align:justify; hyphens:auto;"> To secure an 
-            emplloyment opportunity with a progressive organisation
-            ,where i can utilize my professional skills and knowladge
-             to themaxium add value in the growth of the organisation.
-        </p>
-    </section>
-    <section id ="certification">
-        <h3 style="color:white;">Certifications</h3>
-        <p><b>CSS:</b>From Goverment Collage</p>
-        <p><b>Artifical Intelligence,web 3.0 & Metaverse:</b>From Governor House Karachi(ongoing)</p>
-    </section>
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="test" name="display">
+                </div>
+                <div>
+                    <input type="button" value="AC"onclick="display.value+='' " class="operator">
+                    <input type="button" value="DE"onclick="display.value+= display.value.toString().slice(0,-1)"class="operator">
+                    <input type="button" value="."onclick="display.value+='7' "class="operator">
+                    <input type="button" value="/"onclick="display.value+='7' "class="operator">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value+='7' ">
+                    <input type="button" value="8"onclick="display.value+='8' ">
+                    <input type="button" value="9"onclick="display.value+='9' ">
+                    <input type="button" value="*"onclick="display.value+='*' "class="operator">
+                </div>
+                <div>
+                    <input type="button" value="4"onclick="display.value+='4' ">
+                    <input type="button" value="5"onclick="display.value+='5' ">
+                    <input type="button" value="6"onclick="display.value+='6' ">
+                    <input type="button" value="-"onclick="display.value+='-' "class="operator">
+                </div>
+                <div>
+                    <input type="button" value="1"onclick="display.value+='1' ">
+                    <input type="button" value="2"onclick="display.value+='2' ">
+                    <input type="button" value="3"onclick="display.value+='3' ">
+                    <input type="button" value="+"onclick="display.value+='+' "class="operator">
+                </div>
+                <div>
+                    <input type="button" value="00"onclick="display.value+='00' ">
+                    <input type="button" value="0"onclick="display.value+='0' ">
+                    <input type="button" value="="  onclick="display.value=eval(display.value)"
+                     class="equal"class="operator">
+                </div>
+            </form>
+        </div>
     </div>
-    <!--Right Section-->
-    <div class="right-section">
-        <h1>Static Interactive Resume</h1>
-        <!-- Personal Information-->
-         <section id="personal-info">
-            <h3>Personal Information</h3>
-            <p><b>Name:</b>Kanwal Parveen</p>
-            <p><b>Phone:</b>00987-6543211</p>
-            <p><b>Email:</b><a href="">ABC@gmail.com</a></p>
-            <p><b>Linked:</b><a href="">www.Linked.com</a></p>
-         </section>
-         <!-- Education Section -->
-          <section id="education">
-            <h3>Education</h3>
-            <p><b>Intermediate:</b>Goverment Collage</p>
-            <p><b>Matriculation:</b>private school</p>
-        </section>
-        <!-- Skill Section-->
-         <section id="skills">
-            <h3>Skills</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>TYPESCRIPT</li>
-            </ul>
-        </section>
-        <!-- Button to toggle skills Section-->
-         <button id="toggle-skill"><b>Hide/Show Skills</b></button>
-    </div>
-    </div>
-    <script src="script.ts"></script>
-</body>
-</html> 
+
+    
